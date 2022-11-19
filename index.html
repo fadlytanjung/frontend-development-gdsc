@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title | GDSC USU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /* p {
+      color: red;
+    } */
+    header, footer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      box-sizing: border-box;
+      height: 40px;
+      width: 100%;
+    }
+    header{
+      background-color: pink;
+    }
+    footer {
+      background-color: aqua;
+    }
+    /* main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    } */
+    /* .left-section, .right-section {
+      height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .left-section {
+      width: 100%;
+      background-color: yellow;
+    }
+    .right-section{
+      width: 100%;
+      background-color: teal;
+    } */
+    /* @media only screen and (min-width: 999px){
+      main {
+        flex-direction: row;
+      }
+      .left-section{
+        width: 40%;
+      }
+      .right-section{
+        width: 60%;
+      }
+    } */
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'custom-yellow': 'yellow',
+            'custom-teal': 'teal'
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    This is Header
+  </header>
+  <main class="flex flex-col lg:flex-row w-full">
+    <div class="flex justify-center items-center h-[calc(100vh_-_80px)] w-full lg:w-2/6 bg-custom-yellow">left section</div>
+    <div class="flex justify-center items-center h-[calc(100vh_-_80px)] w-full lg:w-4/6 bg-primary bg-custom-teal">right section</div>
+  </main>
+  <!-- <div class="h-screen">
+    <button onclick="clickBtn()">Click me</button>
+    <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+    focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700
+    dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+    dark:focus:border-blue-500" placeholder="name@flowbite.com"
+    type="text" onchange="changeFunction(this.value)"></input>
+    <p id="p1">This is red color</p>
+  </div> -->
+  <footer>
+    this is Footer
+  </footer>
+  <script src="index.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function clickBtn(){
+      // document.getElementById('p1').style.color = 'red';
+      alert('Button clicked')
+    }
+    function changeFunction(e){
+      console.log(e);
+      document.getElementById('p1').innerHTML = e;
+    }
+  </script>
+</body>
+</html>
